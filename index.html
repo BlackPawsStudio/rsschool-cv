@@ -5,159 +5,195 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
+    <style>
+        main{
+            max-width: 700px;
+            margin: auto;
+        }
+        header{
+            display:flex;
+        }
+        h2{
+            margin-right: 100px;
+        }
+        img{
+            width:100px;
+        }
+        h1{
+            text-align:center;
+        }
+    </style>
 </head>
-    <body>
-    <h1 class="code-line" data-line-start=1 data-line-end=2>Bal Artsemi</h1>
-    <hr>
-    <ol>
-        <li class="has-line-data" data-line-start="3" data-line-end="7"><strong>Contact:</strong>
-            <ul>
-                <li class="has-line-data" data-line-start="4" data-line-end="5"><em>G-mail:</em> <a href="mailto:blackpawsstudio@gmail.com">blackpawsstudio@gmail.com</a>;</li>
-                <li class="has-line-data" data-line-start="5" data-line-end="6"><a href="https://vk.com/id224429894"><em>VK</em></a>;</li>
-                <li class="has-line-data" data-line-start="6" data-line-end="7"><em>Discord:</em> Артемий Баль #6126;</li>
-            </ul>
-            <hr>
-        </li>
-        <li class="has-line-data" data-line-start="8" data-line-end="9"><strong>Objective:</strong>
-            <blockquote>
-                <p class="has-line-data" data-line-start="9" data-line-end="10">Learn how to be frontend developer. I want to face some difficult problems on this course, solve them, get new information about frontend and JavaScript development;</p>
-            </blockquote>
-            <hr>
-        </li>
-        <li class="has-line-data" data-line-start="11" data-line-end="16"><strong>Programming experience:</strong><br>
-            Some layout in HTML/CSS;<br>
-            Solving some problems in JavaScript on Codewars;<br>
-            Backend in Python;<br>
-            Studied C# and Delphi in college;
-            <hr>
-        </li>
-        <li class="has-line-data" data-line-start="17" data-line-end="18"><strong>Code sample in Python:</strong>
-        <pre><code class="has-line-data" data-line-start="19" data-line-end="131">
-            def data_input():
-                f= open ('data2.txt')
-                dot = []
-                for line in f:
-                    dot.append(line)
-                for el in dot:
-                    st = el.split()
-                    i = 0
-                    while i &lt; len(st):
-                        st[i] = int(st[i])
-                        i+=1
-                    dotlist.append(st)
+<body>
+    <main>
+        <h1>CV</h1>
+        <header>
+            <h2 class="code-line" data-line-start=1 data-line-end=2>Bal Artsemi</h2>
+            <img src = "https://sun2.beltelecom-by-minsk.userapi.com/s/v1/if1/06B9SZeHSKzbY7THT8Vt3EEkdZzk9QOfOC7F6lMhFPFQWcMLM0WqtXtq0T2AD7XW9qHbIHqw.jpg?size=200x0&quality=96&crop=0,0,288,288&ava=1" alt = "picture">
+        </header>
+        <hr>
+        <ol>
+            <li class="has-line-data" data-line-start="3" data-line-end="7">
+                <section>
+                    <h4><strong>Contact:</strong></h4>
+                    <ul>
+                    <li class="has-line-data" data-line-start="4" data-line-end="5"><em>G-mail:</em> <a href="mailto:blackpawsstudio@gmail.com">blackpawsstudio@gmail.com</a>;</li>
+                    <li class="has-line-data" data-line-start="5" data-line-end="6"><a href="https://vk.com/id224429894"><em>VK</em></a>;</li>
+                    <li class="has-line-data" data-line-start="6" data-line-end="7"><em>Discord:</em> Артемий Баль #6126;</li>
+                </ul></section>
+                <hr>
+            </li>
+            <li class="has-line-data" data-line-start="8" data-line-end="9"><strong>Objective:</strong>
+                <blockquote>
+                    <p class="has-line-data" data-line-start="9" data-line-end="10">
+                        Learn how to be frontend developer. I want to face some difficult problems on this course, solve them, get new information about frontend and JavaScript development;
+                    </p>
+                </blockquote>
+                <hr>
+            </li>
+            <li class="has-line-data" data-line-start="11" data-line-end="16">
+                <article>
+                    <h4><strong>Programming experience:</strong></h4>
+                    Some layout in HTML/CSS;<br>
+                    Solving some problems in JavaScript on Codewars;<br>
+                    Backend in Python;<br>
+                    Studied C# and Delphi in college;
+                </article>
+                <hr>
+            </li>
+            <li class="has-line-data" data-line-start="17" data-line-end="18"><strong>Code sample in Python:</strong>
+            <details>
+                <summary>
+                    Objective of this program is to solve the problem by the Ford-Falcerson method
+                </summary>
+                <pre><code class="has-line-data" data-line-start="19" data-line-end="131">
+                def data_input():
+                    f= open ('data2.txt')
+                    dot = []
+                    for line in f:
+                        dot.append(line)
+                    for el in dot:
+                        st = el.split()
+                        i = 0
+                        while i &lt; len(st):
+                            st[i] = int(st[i])
+                            i+=1
+                        dotlist.append(st)
 
-            def final_point(fin):
-                i = 0
-                for el in dotlist:
-                    if fin&lt;el[1]:
-                        fin = el [1]
-                return  fin
-
-            def find_path():
-                currdot = [0]
-                notice = False
-                j=0
-                k = 0
-                while int(currdot[j]) &lt; (len(dotlist)/2):
+                def final_point(fin):
                     i = 0
-                while i &lt; (len(dotlist)):
-                    if dotlist[i][2] != 0 and dotlist[i][0] in currdot:
-                        path.append(dotlist[i])
-                        currdot.append(path[k][1])
-                        k+=1
-                        if dotlist[i][1]==final:
+                    for el in dotlist:
+                        if fin&lt;el[1]:
+                            fin = el [1]
+                    return  fin
+
+                def find_path():
+                    currdot = [0]
+                    notice = False
+                    j=0
+                    k = 0
+                    while int(currdot[j]) &lt; (len(dotlist)/2):
+                        i = 0
+                    while i &lt; (len(dotlist)):
+                        if dotlist[i][2] != 0 and dotlist[i][0] in currdot:
+                            path.append(dotlist[i])
+                            currdot.append(path[k][1])
+                            k+=1
+                            if dotlist[i][1]==final:
+                                notice = True
+                                break
+                        i += 1 
+                        if notice:
+                            break
+                        j+=1
+                        if j&gt;100:
                             notice = True
                             break
-                    i += 1 
-                    if notice:
-                        break
-                    j+=1
-                    if j&gt;100:
-                        notice = True
-                        break
-                                        
-            def cleanlist(arr):
-                M = []
-                for e in arr:
-                    if e in M:
-                        continue
-                    M.append(e)
-                return M
+                                            
+                def cleanlist(arr):
+                    M = []
+                    for e in arr:
+                        if e in M:
+                            continue
+                        M.append(e)
+                    return M
 
-            def traceback(arr, v):
-                r=[]
-                currarc = arr.pop()
-                currdot = currarc[1]
-                r.append(currarc[2])
-                prevdot = currarc[0]
-                trace = []
-                trace.append(currarc)
-                while arr != []:
+                def traceback(arr, v):
+                    r=[]
                     currarc = arr.pop()
                     currdot = currarc[1]
-                    if prevdot == currdot:
-                        trace.append(currarc)
-                        r.append(currarc[2])
-                        prevdot = currarc[0]
-                r.sort()
-                v+=r.pop(0)
-                return trace, v
+                    r.append(currarc[2])
+                    prevdot = currarc[0]
+                    trace = []
+                    trace.append(currarc)
+                    while arr != []:
+                        currarc = arr.pop()
+                        currdot = currarc[1]
+                        if prevdot == currdot:
+                            trace.append(currarc)
+                            r.append(currarc[2])
+                            prevdot = currarc[0]
+                    r.sort()
+                    v+=r.pop(0)
+                    return trace, v
 
-            def change_arc(arr,v):
+                def change_arc(arr,v):
+                    i=0
+                    while i&lt;len(arr):
+                        arr[i][2] = arr[i][2]-v 
+                        i+=1
+                    return arr
+
+                def check_full(arr):
+                    for el in arr:
+                        if el[1] == final:
+                            return True
+                        else:
+                            return False
+
+                dotlist = []
+                path = []
+                temp = []
+                v = 0
+                vmax = 0
+                final = 0
+                data_input()
+                final = (final_point(final))
+                print('Путь идет из точки 0 в точку', final, '\n')
                 i=0
-                while i&lt;len(arr):
-                    arr[i][2] = arr[i][2]-v 
-                    i+=1
-                return arr
-
-            def check_full(arr):
-                for el in arr:
-                    if el[1] == final:
-                        return True
-                    else:
-                        return False
-
-            dotlist = []
-            path = []
-            temp = []
-            v = 0
-            vmax = 0
-            final = 0
-            data_input()
-            final = (final_point(final))
-            print('Путь идет из точки 0 в точку', final, '\n')
-            i=0
-            try:
-                while True:
-                    i+=1
-                    find_path()                                
-                    path = (cleanlist(path))
-                    temp = traceback(path, v)
-                    if check_full(temp[0]):
-                        vmax +=temp[1]
-                    path = change_arc(temp[0], temp[1])  
-                    if check_full(temp[0]):
-                        print('Дуги ', i,' итерации ',path) 
-                        print('Vmax',vmax,'\n')       
-                    path = []  
-            except IndexError:
-                print('Конец работы программы!')
-            </code></pre>
-            <hr>
-        </li>
-        <li class="has-line-data" data-line-start="132" data-line-end="134"><strong>Working experience:</strong><br>
-            None
-            <hr>
-        </li>
-        <li class="has-line-data" data-line-start="135" data-line-end="138"><strong>Education:</strong>
-            <ul>
-                <li class="has-line-data" data-line-start="136" data-line-end="137">BSUIR filial “MRC”;</li>
-                <li class="has-line-data" data-line-start="137" data-line-end="138">This online cources;</li>
-            </ul>
-            <hr>
-        </li>
-        <li class="has-line-data" data-line-start="139" data-line-end="141"><strong>Level of English:</strong><br>
-        According to EPAM English test - B1.</li>
+                try:
+                    while True:
+                        i+=1
+                        find_path()                                
+                        path = (cleanlist(path))
+                        temp = traceback(path, v)
+                        if check_full(temp[0]):
+                            vmax +=temp[1]
+                        path = change_arc(temp[0], temp[1])  
+                        if check_full(temp[0]):
+                            print('Дуги ', i,' итерации ',path) 
+                            print('Vmax',vmax,'\n')       
+                        path = []  
+                except IndexError:
+                    print('Конец работы программы!')
+                </code></pre>
+            </details>
+                <hr>
+            </li>
+            <li class="has-line-data" data-line-start="132" data-line-end="134"><strong>Working experience:</strong><br>
+                None
+                <hr>
+            </li>
+            <li class="has-line-data" data-line-start="135" data-line-end="138"><strong>Education:</strong>
+                <ul>
+                    <li class="has-line-data" data-line-start="136" data-line-end="137">BSUIR filial “MRC”;</li>
+                    <li class="has-line-data" data-line-start="137" data-line-end="138">This online cources;</li>
+                </ul>
+                <hr>
+            </li>
+            <li class="has-line-data" data-line-start="139" data-line-end="141"><strong>Level of English:</strong><br>
+            According to EPAM English test - B1.</li>
         </ol>
-    </body>
+    </main>
+</body>
 </html>
