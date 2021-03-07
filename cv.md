@@ -131,7 +131,7 @@ except IndexError:
 ```
 ---
 5. **Working experience:**
-    None
+    None;
 ---
 6. **Education:**
     - BSUIR filial "MRC";
